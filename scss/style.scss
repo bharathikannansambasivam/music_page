@@ -1,0 +1,322 @@
+@import "variable";
+@import "mediaquery";
+@mixin flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+*{
+    box-sizing: border-box;
+}
+
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    // background: $container-bg;
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+}
+
+.main-menu {
+    background: #9f81f7;
+    height: 100vh;
+}
+
+.menu-bar {
+    img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+    }
+}
+
+.logo {
+    @include flex-box;
+    gap: 10%;
+    max-width: 200px;
+}
+
+.menu {
+    h2 {
+        color: $light-gray;
+        opacity: .5;
+        margin-left: 15px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+
+    i {
+        margin-left: 15px;
+        display: grid;
+        justify-content: flex-start;
+        grid-template-columns: 15% 85%;
+
+    }
+
+    li {
+        margin-left: 15px;
+        list-style: none;
+        font-size: 1.3rem;
+        width: 100%;
+    }
+}
+
+.section {
+    
+    background-image: linear-gradient(#8872cb,rgb(148, 72, 214),rgb(35, 12, 40));
+
+   
+    input {
+        width: 60%;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 50px;
+        color: rgb(5, 5, 5);
+        opacity: .5;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    button {
+        width: 20%;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 50px;
+        color: gray;
+        opacity: .5;
+
+        i {
+            display: grid;
+            justify-content: flex-start;
+            grid-template-columns: 15% 75%;
+        }
+    }
+
+    .main-section {
+        display: grid;
+        // grid-template-columns: 40vw 40vw;
+
+        .card {
+            height: 90vh;
+            display: grid;
+            justify-content: center;
+            .current-song {
+                img {
+                    
+                    height: 30vh;
+                    margin-top: 15px;
+                    opacity: .9;
+                }
+
+                .malare{
+                    @include flex-box;
+                }
+                img:hover {
+                    opacity: 100;
+                }
+
+                .song-info {
+                    position: relative;
+                    padding: 10px;
+
+                    @mixin fav_share {
+                        max-width: 45px;
+                        @include flex-box;
+                        background: transparent;
+                        border-radius: 50px;
+                        border: 1px solid rgb(199, 181, 181);
+                        font-size: 20px;
+                        position: absolute;
+                        left: 70%;
+                    }
+
+                    .fav {
+                        @include fav_share;
+                        bottom: 50%;
+                    }
+
+                    .share {
+                        @include fav_share;
+                        top: 50%;
+                    }
+
+                    .fav:hover {
+                        background-color: rgb(192, 53, 173);
+                    }
+                    .share:hover{
+                        background-color: rgb(0, 255, 26);
+                    }
+
+                }
+
+                .btn {
+                    width: 100%;
+                    @include flex-box;
+                    flex-direction: column;
+
+                    button {
+                        width: 80%;
+                        border: none;
+                        background-image: linear-gradient(rgb(206, 0, 238), rgb(152, 24, 184));
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .div {
+        display: flex;
+        gap: 7vw;
+        background: rgb(196, 113, 181);
+        padding: 10px;
+        width: 
+        100vw;
+        font-size: 20px;
+        position: fixed;
+        bottom: 0;
+        left: 1vw;
+        .div1 {
+            @include flex-box;
+            gap: 10px;
+
+            img {
+                height: 70px;
+                width: 70px;
+            }
+        }
+
+        .div2 {
+            @include flex-box;
+            gap: 40%;
+            padding: 30px;
+
+            i {
+
+                &:nth-child(2) {
+                    background:
+                        $red;
+                    padding: 10px;
+                    border-radius: 50px;
+                    border: none;
+                }
+            }
+        }
+
+        i {
+            &:nth-child(2) {
+                @include flex-box;      
+               
+
+            }
+
+            &:nth-child(4) {
+                @include flex-box;
+                width: 100%;
+                
+            }
+            &:nth-child(6) {
+                @include flex-box;
+            }
+        }
+    }
+}
+
+
+.card2{
+    width: 30vw;
+    height: 89.5vh;
+    h2{
+color: rgb(0, 0, 0);      
+  text-align: center;
+
+    }
+}
+
+
+
+.artist{
+    @include flex-box;
+    height: 10vh;
+    width: 30vw;
+    justify-content: space-around;
+    background: rgb(220, 220, 220);
+    border-radius: 10px;
+    margin-bottom: 10vh;
+     img{
+            height: 70px;
+            border-radius: 60px;
+            width: 70px;
+        
+     }
+   
+  
+}
+.artist:hover{
+    background: rgb(174, 169, 169);
+
+
+}
+.all-songs{
+    @include flex-box;
+    margin: 20px 0;
+    gap: 3vh;
+    flex-direction: column;
+
+    .songs{
+        border-radius: 10px;
+        background: rgb(211, 192, 192);
+        @include flex-box;
+        justify-content: space-around;
+        width: 30vw;
+padding: 10px;        img{
+            height: 70px;
+            width: 70px;
+            border-radius: 6px;
+        }
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .main-section {
+        display: grid;
+         grid-template-columns: 40vw 40vw;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+nav{
+    display: none;
+}
+.section{
+    width: 100vw;
+}
+.card{
+    width: 100vw;
+}
+.card2{
+    width: 100vw;
+}
+.all-songs .songs{
+    width: 80vw;
+}
+footer {
+    margin-top: 48vh;
+}
+footer i{
+    font-size: 10px;
+}
+  footer .div {
+    width: 100vw;        left: 2.5%;
+
+    font-size: 10px;
+    padding: 0px;
+
+  }
+
+  }
+  
