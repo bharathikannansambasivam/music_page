@@ -99,7 +99,7 @@
         // grid-template-columns: 40vw 40vw;
 
         .card {
-            height: 90vh;
+            min-height: 90vh;
             display: grid;
             justify-content: center;
             .current-song {
@@ -229,7 +229,7 @@ footer {
 
 .card2{
     width: 30vw;
-    height: 89.5vh;
+    min-height: 89.5vh;
     h2{
 color: rgb(0, 0, 0);      
   text-align: center;
@@ -281,6 +281,10 @@ padding: 10px;
         }
     }
 }
+
+
+
+
 
 @media only screen and (min-width: 800px) {
     .main-section {

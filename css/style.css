@@ -66,7 +66,7 @@
   .section .main-section {
     display: grid; }
     .section .main-section .card {
-      height: 90vh;
+      min-height: 90vh;
       display: grid;
       justify-content: center; }
       .section .main-section .card .current-song img {
@@ -167,7 +167,7 @@ footer .div {
 
 .card2 {
   width: 30vw;
-  height: 89.5vh; }
+  min-height: 89.5vh; }
   .card2 h2 {
     color: black;
     text-align: center; }
