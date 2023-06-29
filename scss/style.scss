@@ -80,8 +80,8 @@
         font-family: 'Courier New', Courier, monospace;
     }
 
-    button {
-        width: 20%;
+    button {     
+           width: 20%;
         margin: 10px;
         padding: 10px;
         border-radius: 50px;
@@ -89,8 +89,7 @@
         opacity: .5;
 
         i {
-            display: grid;
-            justify-content: flex-start;
+           display: grid;
             grid-template-columns: 15% 75%;
         }
     }
@@ -258,7 +257,7 @@ color: rgb(0, 0, 0);
   
 }
 .artist:hover{
-    background: rgb(174, 169, 169);
+    background: rgb(219, 0, 0);
 
 
 }
@@ -274,9 +273,10 @@ color: rgb(0, 0, 0);
         @include flex-box;
         justify-content: space-around;
         width: 30vw;
-padding: 10px;        img{
+padding: 10px;   
+     img{
+         width:     70px;
             height: 70px;
-            width: 70px;
             border-radius: 6px;
         }
     }
@@ -296,16 +296,20 @@ nav{
     width: 100vw;
 }
 .card{
-    width: 100vw;
-}
+    width: 100vw;   
+
+}  
+
+
 .card2{
+    
     width: 100vw;
 }
 .all-songs .songs{
     width: 80vw;
 }
 footer {
-    margin-top: 48vh;
+    margin-top: 40vh;
 }
 footer i{
     font-size: 10px;
@@ -317,6 +321,18 @@ footer i{
     padding: 0px;
 
   }
-
+  .artist {
+    background: rgb(188, 172, 172);
+    height: 15vh;
+    width: 80vw;
+    gap: 5px;
+    padding: 10px;
+  
+  }
+  .artist img {
+    height: 10vh;
+    border-radius: 60px;
+    width: 18vw; }
+  
   }
   
