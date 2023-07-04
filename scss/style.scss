@@ -20,7 +20,7 @@
 
 .main-menu {
     background: #9f81f7;
-    height: 100vh;
+    height: 100%;
 }
 
 .menu-bar {
@@ -284,15 +284,21 @@ padding: 10px;
 
 
 
+// @media only screen and (min-width: 80px) {
 
-
+// .main-menu {
+//     background: #9f81f7;
+//     height: 130vh;
+// }
+// }
 @media only screen and (min-width: 800px) {
     .main-section {
         display: grid;
          grid-template-columns: 40vw 40vw;
     }
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 799px) {
+   
 nav{
     display: none;
 }
